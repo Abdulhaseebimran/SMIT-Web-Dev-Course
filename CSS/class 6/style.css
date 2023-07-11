@@ -1,0 +1,48 @@
+body{
+    background-color: gray;
+}
+
+.black{
+    background-color: black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+.white{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+img{
+    /* position: absolute; */
+    /* top: 10px; */
+    /* left: 115px; */
+    /* right: 75px; */
+    
+    position: relative;
+    top: -100px;
+}
+
+ul > li{
+    text-decoration: none;
+    display: inline-block;
+    width: 150px;
+    /* background-color: brown; */
+    /* position: sticky; */
+    /* top: 0px; */
+}
+
+ul{
+    background-color: aquamarine;
+    position: sticky;
+    top: 0px;
+}
+
+.goto{
+    position: fixed;
+    top: 1000px;
+    right: 10px;
+}
