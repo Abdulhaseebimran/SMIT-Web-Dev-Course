@@ -5,6 +5,12 @@
 let date = new Date();
 
 console.log(date);
+// console.log(date.toLocaleString()); // 9/30/2021, 7:00:00 PM
+// console.log(date.toLocaleDateString()); // 9/30/2021
+// console.log(date.toLocaleTimeString()); // 7:00:00 PM
+// console.log(date.toUTCString()); // Thu, 30 Sep 2021 13:00:00 GMT
+// console.log(date.toDateString()); // Thu Sep 30 2021
+// console.log(date.toTimeString()); // 19:00:00 GMT+0500 (Pakistan Standard Time)
 
 // console.log(typeof date); // object
 
