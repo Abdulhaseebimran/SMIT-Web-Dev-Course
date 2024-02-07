@@ -61,6 +61,7 @@ function submitForm(){
 
 }
 
-let name = document.getElementById('heading');
-name.innerHTML = "<span>Abdul Haseeb Imran</span>";
+// let name = document.getElementById('heading');
+// name.innerHTML = "<span>Abdul Haseeb Imran</span>";
+
     

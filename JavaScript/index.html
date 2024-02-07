@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMIT JS Class code practice</title>
+    <style>
+        .big{
+            width: 200px;
+            height: 400px;
+            transform: scale(1.2);
+        }
+        .small{
+            width: 100px;
+            height: 200px;
+        }
+    </style>
 </head>
-<body>
+<>
 
     <!-- <button onclick="clickEvent()">Click Me</button>
     <h1 onmouseover="applyStyle()" onmouseout="applyStyle()">Hello World!</h1> -->
@@ -30,11 +41,34 @@
     <div id="heading"></div> -->
 
 
+    <!-- Event 2 Class -->
+
+    <img id="image" onmouseover="updateImage()"
+    onmouseout="removeImage()"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRim43FOsSU9F-TXSSABOeBOKxC2UPRthwJRA&usqp=CAU" alt="">
+
+    <a id="link1" onclick="getLink()" href="https://www.google.com">Visit google</a>
+    <br/>
+    <a href="https://www.yahoo.com">Visit yahoo</a>
+    <br/>
+    <button onclick="submit()">Submit</button>
+
+    <label>
+        Male <input type="radio" name="gender" id="male" value="male">
+    </label>
+    <br />
+    <label>
+        Female <input type="radio" name="gender" id="female" value="female">
+    </label>
+
+
+
     <!-- <script src="./forLoop.js"></script> -->
     <!-- <script src="./stringMethods.js"></script> -->
     <!-- <script src="./dateMethods.js"></script> -->
     <!-- <script src="./functions.js"></script> -->
     <!-- <script src="./switch.js"></script> -->
     <!-- <script src="./events.js"></script> -->
+    <script src="events2.js"></script>
 </body>
 </html>
