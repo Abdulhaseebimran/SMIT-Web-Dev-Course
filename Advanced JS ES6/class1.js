@@ -121,3 +121,15 @@ object2.details.rollNo = 456;
 
 
 console.log(object1, object2);
+
+
+// setTimeout( function (){
+//     let name = "Haseeb";
+//     getName(name);
+// }, 3000);
+
+// function getName (a){
+//     console.log(a);
+// }
+
+
