@@ -18,21 +18,21 @@ var name = "Doe";
 let name1 = "John";
 name1 = "Doe";
 
-console.log(name1); // Doe
+// console.log(name1); // Doe
 
 // let can be re-assigned but not re-declared
 
 const name2 = "John";
 // name2 = "Doe";  // value cannot be re-assigned
 
-console.log(name2); // Error
+// console.log(name2); // Error
 
 
 const std = {name: "haseeb", age: 20};
 
 std.name = "Ali"; // value can be changed not object because it's const variable
 
-console.log(std); // {name: "Ali", age: 20}
+// console.log(std); // {name: "Ali", age: 20}
 
 // Desctructuring  => Array and Objects
 
@@ -43,15 +43,15 @@ let myObj = {myName: "haseeb", age: 20, city: "Karachi",
 let {myName, age, city, details} = myObj;
 let {className, rollNo} = details;
 
-console.log(myName, age, city); // haseeb 20 Karachi
-console.log(className, rollNo); // BS 123
+// console.log(myName, age, city); // haseeb 20 Karachi
+// console.log(className, rollNo); // BS 123
 
 let myArr = ["Abdul", "Haseeb"];
 
 let [a, b] = myArr;
 
-console.log(a);
-console.log(b);
+// console.log(a);
+// console.log(b);
 
 // function myName1(myObj){
 //     console.log(myObj);
@@ -70,10 +70,54 @@ function restFunc (...rest){
     console.log(rest);
 }
 
-restFunc(1,2,3,4,5);
+// restFunc(1,2,3,4,5);
+
+
+// spread operators
+
+let arr1 = ["Abdul", "Haseeb"];
+let arr2 = ["Ali", "Ahmed"];
+
+let mergeArr = [...arr1, ...arr2];
+
+// console.log(mergeArr);
 
 
 
+// shallow copy and deep copy
+
+// let object1 = {
+//     name: "Haseeb",
+//     age: 20,
+//     city: "Karachi"
+// }
+
+// let object2 = object1;
+// let object2 = {...object1};  // shallow copy
+
+// object2.name = "Ali";
+
+// console.log(object1, object2);
+
+// nested object
+
+let object1 = {
+    name: "Haseeb",
+    age: 20,
+    city: "Karachi",
+    details: {
+        className: "BS",
+        rollNo: 123
+    }
+};
+
+// let object2 = {...object1};
+// object2.details.className = "MS";
+
+let object2 = {...object1, details: {...object1}};  // deep copy
+
+object2.details.className = "MS";
+object2.details.rollNo = 456;
 
 
-
+console.log(object1, object2);
