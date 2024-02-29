@@ -109,8 +109,17 @@ let getData = new Promise ((resolve, reject) => {
     }).catch(err => reject(err));
 }) 
 
-getData.then(res => console.log(res));
-getData.catch(err => console.log(err));
+// getData.then(res => console.log(res));
+// getData.catch(err => console.log(err));
 
+let sendData = async () => {
+    try {
+        let data = await getData;
+        console.log(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
+sendData();
 
