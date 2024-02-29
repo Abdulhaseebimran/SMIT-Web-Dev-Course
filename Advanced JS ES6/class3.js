@@ -39,8 +39,78 @@ const myobj = {
 
 // console.log(greet());
 
+function abc(callback) {
+    // console.log("I am a callback function", callback);
+    callback();
+}
+
+function greet() {
+    console.log("Hello");
+}
+
+// abc(greet);
+
+// Higher Order Function
+
+function num(a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c;
+        }
+    }
+}
+ 
+// console.log(num(2)(3)(4));
 
 
+// Recursion
+
+var count = 0;
+function countNum(){
+    count++;
+    console.log(count);
+    if(count < 10){
+        countNum();
+    }
+}
+
+// countNum();
+
+// promise 
+
+let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise is resolved");
+    }, 5000);
+});
+
+
+// console.log(promise);
+
+// promise.then((res) => {
+//     console.log(res);
+// }).catch((err) => {
+//     console.log(err);
+// })
+
+// let data;
+// fetch("https://fakestoreapi.com/products")
+// .then(res => res.json())
+// .then(res => {
+//     data = res;
+// }).catch(err => console.log(err));
+
+
+let getData = new Promise ((resolve, reject) => {
+    fetch("https://fakestoreapi.com/products")
+    .then(res => res.json())
+    .then(res => {
+        resolve(res);
+    }).catch(err => reject(err));
+}) 
+
+getData.then(res => console.log(res));
+getData.catch(err => console.log(err));
 
 
 
